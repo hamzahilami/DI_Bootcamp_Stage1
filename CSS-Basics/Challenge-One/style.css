@@ -1,0 +1,54 @@
+/* style.css */
+body {
+    font-family: 'Times New Roman', serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #00FFFF;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.intro {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.sonnet {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.sonnet p {
+    margin: 0;
+    padding: 0;
+}
+
+.sonnet p::first-letter {
+    text-transform: capitalize;
+}
+
+.footer {
+    font-size: 14px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.intro::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+    color: #333;
+}

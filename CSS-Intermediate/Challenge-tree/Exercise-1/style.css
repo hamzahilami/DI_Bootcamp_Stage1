@@ -1,0 +1,62 @@
+body {
+    margin: 20px; /* Add some margin around the entire layout */
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    min-height: auto; /* No need to force full viewport height anymore */
+    display: flex; /* Enable centering of the container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional, depending on desired effect) */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%; /* Set a percentage width of the viewport */
+    max-width: 960px; /* Optionally add a maximum width for larger screens */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* Remove or adjust min-height if you don't want it full viewport height */
+    /* min-height: calc(100vh - 40px); */
+}
+
+.top-sections {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+.box {
+    height: 80px; /* Set a fixed height for the boxes again */
+    border: 1px solid #000;
+}
+
+.red {
+    background-color: #fca5a5;
+}
+
+.blue {
+    background-color: #89cff0;
+}
+
+.bottom-section {
+    height: 60px; /* Set a fixed height for the bottom section again */
+    background-color: #ffe599;
+    border: 1px solid #000;
+}

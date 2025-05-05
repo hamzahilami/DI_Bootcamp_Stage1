@@ -1,0 +1,143 @@
+/* style.css */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #ff7e5f;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --card-bg: #fff;
+}
+
+[data-theme="dark"] {
+    --primary-color: #6b8cbe;
+    --secondary-color: #ff9e7f;
+    --text-color: #f0f0f0;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--card-bg);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+        height: 300px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}

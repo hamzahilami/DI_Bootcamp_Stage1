@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rebeccapurple;
+    padding: 40px; /* Increased header padding to make it bigger */
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+main > div {
+    min-height: 100px; /* Decreased minimum height of the boxes */
+}
+
+.left {
+    background-color: lightcoral;
+}
+
+.middle {
+    background-color: lightgreen;
+}
+
+.right {
+    background-color: orange;
+}
+
+header:hover {
+    background-color: #663399; /* A slightly darker purple */
+    cursor: pointer; /* Change the cursor to indicate it's interactive */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+main > div:hover {
+    filter: brightness(1.1); /* Slightly brighten the color on hover */
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+}
